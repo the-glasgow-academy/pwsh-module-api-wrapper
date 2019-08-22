@@ -14,7 +14,7 @@ function Get-ApiContent {
             Method  = "GET"
             Headers = @{"Authorization" = "Bearer $Token" }
         }
-        if ($All) { $pContent.Add("FollowRelLink", "$true") }
+        if ($All) { $pContent["FollowRelLink"] = $true }
         $content = Invoke-RestMethod @pContent
         return $content
     }
