@@ -10,7 +10,7 @@ function Connect-API {
     Process {
         $plogin = @{
             uri    = "$URL/login"
-            Method = POST
+            Method = "POST"
             Body   = "clientid=$ClientID&clientsecret=$ClientSecret"
         }
         $token = Invoke-RestMethod @plogin
